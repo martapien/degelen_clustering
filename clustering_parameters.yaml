@@ -1,0 +1,17 @@
+clustering: 'ks'
+gak_km:
+  n_clusters: 2
+  max_iter: 50
+  tol: 1e-6
+  n_init: 50
+  kernel_params:
+    # from tslearn documentation: for GAK, the only parameter of interest is sigma
+    # ‘auto’: computed based on a sampling of the training set (cf tslearn.metrics.sigma_gak)
+    # If no specific value is set for sigma and you leave "" here, its defaults to 1.
+    sigma: "auto"
+  n_jobs: 4
+ks:
+  n_clusters: 3
+  max_iter: 10 #100, 10 is just for testing
+  tol: 1e-3 # 1e-6
+  n_init: 5 # 10
