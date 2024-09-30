@@ -1,4 +1,4 @@
-With this app you can explore the results presented in "Ringing mountain ranges: Teleseismic signature of the interaction of high-frequency wavefields with near-source topography at the Degelen nuclear test site" by Pienkowska et al ([preprint](https://eartharxiv.org/repository/view/7180/)).
+With this app you can explore the results presented in "Ringing mountain ranges: Teleseismic signature of the interaction of high-frequency wavefields with near-source topography at the Degelen nuclear test site" by Pienkowska et al ([preprint](https://eartharxiv.org/repository/view/7180/)). The Degelen time series data come from [AWE Blacknest](https://bdsweb.blacknest.gov.uk/digitised), in particular we cluster some of the [Kazakhstan historic digitised data](https://bdsweb.blacknest.gov.uk/digitised/kazakh.tar.gz)
 
 Currently the app works only locally. We are working towards deployment on the Streamlit Community Cloud.
 
