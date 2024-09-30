@@ -2,11 +2,15 @@ With this app you can explore the results presented in "Ringing mountain ranges:
 
 Currently the app works only locally. We are working towards deployment on the Streamlit Community Cloud.
 
-To run the app locally, pull this repository and create an environment with `conda` or `mamba` using the provided `environment.yml` file.
+To run the app locally, pull this repository and create an environment with `mamba` or `conda` using the provided `environment.yml` file. 
 
-```shell
-conda env create -f environment.yml
+(If you need help installing `mamba` or `conda`, see [here](https://mamba.readthedocs.io/en/latest/installation/mamba-installation.html) or [here](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html)).
+
 ```
+mamba env create -f environment.yml
+```
+
+The default environment name is `degelen_clustering` - you can change this if you like.
 
 Activate the environment and [install Streamlit](https://docs.streamlit.io/get-started/installation/command-line):
 
@@ -28,7 +32,7 @@ Before you perform the clustering, you can:
 - select the array of interest (GBA, YKA, WRA or EKA)
 - set the maximum filter frequency for the waveforms (0.5-8 Hz)
 - set the length of the time series (2-60 s),
-- select the clustering algorithm (kShape or GAK kernel kMeans, see https://tslearn.readthedocs.io/en/latest/gen_modules/tslearn.clustering.html)
+- select the clustering algorithm (kShape or GAK kernel kMeans, see [here](https://tslearn.readthedocs.io/en/latest/gen_modules/tslearn.clustering.html)) 
 - set the number of clusters
 - adjust more advanced parameters of the selected clustering algorithm
 
