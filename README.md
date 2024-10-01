@@ -1,6 +1,6 @@
-With this app you can explore the results presented in "Ringing mountain ranges: Teleseismic signature of the interaction of high-frequency wavefields with near-source topography at the Degelen nuclear test site" by Pienkowska et al ([preprint](https://eartharxiv.org/repository/view/7180/)). The Degelen time series data come from [AWE Blacknest](https://bdsweb.blacknest.gov.uk/digitised), in particular we cluster some of the [Kazakhstan historic digitised data](https://bdsweb.blacknest.gov.uk/digitised/kazakh.tar.gz)
+Please note that currently the app works only locally. We are working towards deployment on the Streamlit Community Cloud.
 
-Currently the app works only locally. We are working towards deployment on the Streamlit Community Cloud.
+With this app you can explore the results presented in "Ringing mountain ranges: Teleseismic signature of the interaction of high-frequency wavefields with near-source topography at the Degelen nuclear test site" by Pienkowska et al ([preprint](https://eartharxiv.org/repository/view/7180/)). The Degelen time series data come from [AWE Blacknest](https://bdsweb.blacknest.gov.uk/digitised), in particular we cluster some of the [Kazakhstan historic digitised data](https://bdsweb.blacknest.gov.uk/digitised/kazakh.tar.gz)
 
 To run the app locally, pull this repository and create an environment with `mamba` or `conda` using the provided `environment.yml` file. 
 
@@ -18,7 +18,17 @@ Activate the environment and [install Streamlit](https://docs.streamlit.io/get-s
 pip install streamlit
 ```
 
-Now enter the root of the repo and run:
+Now you need to populate the `data` repository with the Degelen data [that you have to download yourself here](https://bdsweb.blacknest.gov.uk/digitised/kazakh.tar.gz).
+Unpack the downoaded `kazakh.tar.gz` and navigate to `kazakh/kazakh/degelen`. The events are sorted by year and date. Now extract the SAC files into the `data` folder as follows:
+
+```commandline
+find . -name \*EKA-sum.sac -exec cp {} /path/to/subfolder/data/EKA \;
+find . -name \*GBA-sum.sac -exec cp {} /path/to/subfolder/data/GBA \;
+find . -name \*YKA-sum.sac -exec cp {} /path/to/subfolder/data/YKA \;
+find . -name \*WRA-sum.sac -exec cp {} /path/to/subfolder/data/WRA \;
+```
+
+Now enter the root of the repo again and run:
 
 ```
 streamlit run degelen_app.py
